@@ -15,4 +15,4 @@
 
 | Task | File |
 | ---- | ---- |
-| 0. Bubble Sort | [0.bubble_sort.c](./0-bubble_sort.c) & [0-O](./0-O) |
+| 0. Bubble Sort | [0.bubble_sort.c](./0-bubble_sort.c) - [0-O](./0-O) |
