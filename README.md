@@ -14,4 +14,4 @@
 <h2>Tasks</h2>
 
 | Task | File |
-| ---- | ---- |
+| 0. Bubble Sort | [0.bubble_sort.c](./0-bubble_sort.c) [0-O](./0-O)|
