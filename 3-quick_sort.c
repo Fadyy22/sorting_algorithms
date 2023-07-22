@@ -20,13 +20,15 @@ void swap(int *a, int *b)
 /**
  * partition - performs the partitioning of the qsort algorithm
  *
+ * @array: array to be sorted
+ * @start: start of the array
+ * @end: end of the array
  *
+ * Return: pivot index
  */
-int partition(int *array, int start, int end, size_t size)
+int partition(int *array, int start, int end)
 {
 	int pivot, p_index, i;
-
-	(void)size;
 
 	pivot = array[end];
 	p_index = start;
@@ -40,11 +42,11 @@ int partition(int *array, int start, int end, size_t size)
 		}
 	}
 	swap(&array[p_index], &array[end]);
-	return p_index;
+	return (p_index);
 }
 
 /**
- * qsort - sorts an array using quick sort
+ * q_sort - sorts an array using quick sort
  *
  * @array: array to be sorted
  * @start: start index
