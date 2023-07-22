@@ -61,7 +61,7 @@ void q_sort(int *array, int start, int end, size_t size)
 
 	if (start < end)
 	{
-		p_index = partition(array, start, end, size);
+		p_index = partition(array, start, end);
 		print_array(array, size);
 		q_sort(array, start, p_index - 1, size);
 		q_sort(array, p_index + 1, end, size);
