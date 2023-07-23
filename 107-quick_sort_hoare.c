@@ -18,7 +18,7 @@ void swap(int *a, int *b)
 }
 
 /**
- * partition - performs the partitioning of the qsort algorithm
+ * hoare_partition - performs the partitioning of the qsort algorithm
  *
  * @array: array to be sorted
  * @start: start of the array
@@ -37,13 +37,12 @@ int hoare_partition(int *array, int start, int end, size_t size)
 	while (i < j)
 	{
 		do
-		{
 			i++;
-		} while (array[i] < pivot);
+		while (array[i] < pivot);
+
 		do
-		{
 			j--;
-		} while (array[j] > pivot);
+		while (array[j] > pivot);
 
 		if (i < j)
 		{
@@ -77,8 +76,8 @@ void q_sort(int *array, int start, int end, size_t size)
 }
 
 /**
- * quick_sort - sorts an array of integers in ascending order
- * using the Quick sort algorithm (Lomuto partition scheme)
+ * quick_sort_hoare - sorts an array of integers in ascending order
+ * using the Quick sort algorithm (Hoare partition scheme)
  *
  * @array: array to be sorted
  * @size: size of the array
