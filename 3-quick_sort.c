@@ -23,10 +23,11 @@ void swap(int *a, int *b)
  * @array: array to be sorted
  * @start: start of the array
  * @end: end of the array
+ * @size: size of the array
  *
  * Return: pivot index
  */
-int partition(int *array, int start, int end)
+int partition(int *array, int start, int end, size_t size)
 {
 	int pivot, p_index, i;
 
@@ -38,10 +39,14 @@ int partition(int *array, int start, int end)
 		if (array[i] <= pivot)
 		{
 			swap(&array[i], &array[p_index]);
+			if (p_index != i)
+				print_array(array, size);
 			p_index++;
 		}
 	}
 	swap(&array[p_index], &array[end]);
+	if (p_index != end)
+		print_array(array, size);
 	return (p_index);
 }
 
@@ -61,8 +66,7 @@ void q_sort(int *array, int start, int end, size_t size)
 
 	if (start < end)
 	{
-		p_index = partition(array, start, end);
-		print_array(array, size);
+		p_index = partition(array, start, end, size);
 		q_sort(array, start, p_index - 1, size);
 		q_sort(array, p_index + 1, end, size);
 	}
